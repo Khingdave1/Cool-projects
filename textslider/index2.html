@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #00008b;
+        }
+        .container {
+            position: absolute;
+            left: 14%;
+            top: 57%;
+            transform: translateY(-50%);
+        }
+        /* Message container */
+        .msg-container {
+            width: 600px;
+            height: 280px;
+            
+            overflow: hidden;
+        }
+        #slider {
+            display: inline-flex;
+            transition: 0.5s;
+        }
+        .msg-col {
+            width: 600px;
+            height: 280px;
+        }
+        .msg-col h1 {
+            font-size: 80px;
+            font-weight: 100;
+            margin: 10px 0;
+            color: #fff;
+        }
+        .msg-col p {
+            color: #ddd;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .msg-col a {
+            display: inline-block;
+            text-decoration: none;
+            color: #555;
+            background-color: #fff;
+            font-size: 15px;
+            padding: 10px 35px;
+            border-radius: 30px;
+            margin-top: 25px;
+        }
+        #line1,
+        #line2,
+        #line3,
+        #line4 {
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.26);
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- message container -->
+    <div class="container">
+        <div class="msg-container">
+            <div id="slider">
+                <div class="msg-col">
+                    <h1>The Reasoning</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor sit amet, consectetur Read more.Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The Knowledge</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor sit amet, consectetur Read more.Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The Integration</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor sit amet, consectetur Read more.Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The Learning</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor sit amet, consectetur Read more.Lorem ipsum dolor sit amet, consectetur adipiscing elitorem ipsum dolor</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <!-- Controller -->
+        <div class="controller">
+            <div id="line1" class="dot active"></div>
+            <div id="line2" class="dot"></div>
+            <div id="line3" class="dot"></div>
+            <div id="line4" class="dot"></div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        let slider = document.getElementById('slider');
+        let active = document.getElementById('active');
+        let line1 = document.getElementById('line1');
+        let line2 = document.getElementById('line2');
+        let line3 = document.getElementById('line3');
+        let line4 = document.getElementById('line4');
+
+        line1.onclick = function(){
+            slider.style.transform = 'translateX(0)';
+        }
+        line2.onclick = function(){
+            slider.style.transform = 'translateX(-25%)';
+        }
+        line3.onclick = function(){
+            slider.style.transform = 'translateX(-50%)';
+        }
+        line4.onclick = function(){
+            slider.style.transform = 'translateX(-75%)';
+        }
+
+
+        /*===== ACTIVE AND REMOVE MENU =====*/
+        const dots = document.querySelectorAll('.dot');   
+
+        function dotClick() {
+            //   Active link
+            dots.forEach(dot => dot.classList.remove('active'));
+            this.classList.add('active');
+        }
+        dots.forEach(dot => dot.addEventListener('click', dotClick));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Import Variables */
+@import url(partials/_variable.css);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-color: hsl(210, 14%, 93%);
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 36vw;
+    margin: 5% auto;
+    position: relative;
+}
+
+.heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.heading h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+.heading a {
+    color: var(--primary-color);
+}
+
+.signin-area {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 35px;
+}
+.form {
+    display: grid;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+.signin-area_email input,
+.signin-area_password input {
+    width: 100%;
+    padding: 15px 5px;
+    border: 2px solid #d5d5d8;
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+    margin-top: 5px;
+}
+.signin-area_email input:hover,
+.signin-area_password input:hover {
+    box-shadow: var(--box-shadow);
+}
+.signin-area label {
+    font-size: 18px;
+    color: #3b3f48;
+    font-weight: 500;
+}
+.signin-area_extra {
+    display: flex;
+    justify-content: space-between;
+}
+.signin-area_extra a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.btn {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+    border: none;
+    padding: 15px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: hsl(176, 100%, 28%);
+    border-radius: inherit;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+}
+.btn:hover .btn::after {
+    opacity: 1;
+}
+ 
+.signin-area_other p {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    color: hsla(0, 0%, 50%, 0.83);
+}
+.signin-area_other p::before,
+.signin-area_other p::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background: hsla(0, 0%, 50%, 0.83);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.signin-area_other p::before {
+    margin-right: 25px;
+}
+.signin-area_other p::after {
+    margin-left: 25px;
+}
+.signin-area_other_social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.signin-area_other_social a {
+    color: hsla(0, 0%, 50%, 0.95);
+    font-size: 20px;
+    padding: 8px 45px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transform: scale(1);
+    filter: brightness(1);
+    transition: all 0.2s ease-in-out;
+}
+.signin-area_other_social a:hover {
+    transform: scale(1.05);
+    filter: brightness(0.15);
+}
+.signin-area_other_social ion-icon {
+    vertical-align: middle;
+}
+
+/* WELCOME USER */
+.welcome-page .heading {
+    text-align: left !important;
+}
+

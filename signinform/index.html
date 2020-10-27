@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap" rel="stylesheet">
+        <title>Sign in</title>
+    </head>
+    <body>
+        <div class="container" id="signin_div">
+            <div class="heading">
+                <h1>Sign into your account</h1>
+                <p>Or <a href="#">start your 14 days free trial</a></p>
+            </div>
+            <div class="signin-area">
+                <form action="" class="form">
+                    <div class="signin-area_email">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="signin-area_password">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="signin-area_extra">
+                        <div>
+                            <input type="checkbox" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <p><a href="#">Forgot your password?</a></p>
+                    </div>
+                    <div class="signin-area_btn">
+                        <button class="btn" onclick="signIn()">Sign in</button>
+                    </div>
+                </form>
+                
+                <div class="signin-area_other">
+                    <p>Or continue with</p>
+                    <div class="signin-area_other_social">
+                        <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> 
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBeH1z9_Kae7aHzpoaqMfb_Sfp3MESxRVU",
+        authDomain: "sign-in-951ae.firebaseapp.com",
+        databaseURL: "https://sign-in-951ae.firebaseio.com",
+        projectId: "sign-in-951ae",
+        storageBucket: "sign-in-951ae.appspot.com",
+        messagingSenderId: "177429914213",
+        appId: "1:177429914213:web:171fb291c3a388ddd75c8c",
+        measurementId: "G-DCGZVGGPBB"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    </body>
+</html>

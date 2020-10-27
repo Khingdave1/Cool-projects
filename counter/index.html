@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Title -->
+    <title>Counter</title>
+
+    <!-- Style  -->
+    <style>
+        main {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: hsl(210, 36%, 96%);
+        }
+        main h1 {
+            font-size: 70px;
+            color: hsl(205, 77%, 27%);
+        }
+        #value {
+            font-size: 6rem;
+            font-weight: bold;
+            color: hsl(205, 77%, 27%);
+        }
+        .btn:hover {
+            color: #ffffff;
+            background-color: hsl(205, 77%, 27%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Counter -->
+    <main class="text-center">
+        <div>
+            <h1>Counter</h1>
+            <p id="value">0</p>
+            <div class="p-0 m-0">
+                <a href="#" class="btn decrease text-uppercase font-weight-bold border border-dark py-2 px-4 rounded">Decrease</a>
+                <a href="#" class="btn reset text-uppercase font-weight-bold border border-dark py-2 px-4 rounded mx-3">Reset</a>
+                <a href="#" class="btn increase text-uppercase font-weight-bold border border-dark py-2 px-4 rounded">Increase</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // set inital value to zero
+        let count = 0;
+        // select value and buttons
+        const value = document.querySelector("#value");
+        const btns = document.querySelectorAll(".btn");
+
+        btns.forEach(function (btn) {
+            btn.addEventListener("click", function ($event) {
+                const styles = $event.currentTarget.classList;
+                if (styles.contains("decrease")) {
+                    count--;
+                } else if (styles.contains("increase")) {
+                    count++;
+                } else {
+                    count = 0;
+                }
+
+                if (count > 0) {
+                    value.style.color = "green";
+                }
+                if (count < 0) {
+                    value.style.color = "red";
+                }
+                if (count === 0) {
+                    value.style.color = "#222";
+                }
+                value.textContent = count;
+            });
+        });
+    </script>
+</body>
+</html>

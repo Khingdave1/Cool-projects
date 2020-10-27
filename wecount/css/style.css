@@ -1,0 +1,71 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(210, 36%, 96%);
+}
+main {
+    margin: 5% 0;
+}
+.content-container {
+    border-radius: 0 15px 15px 15px;
+    -webkit-border-radius: 0 15px 15px 15px;
+    -moz-border-radius: 0 15px 15px 15px;
+    -ms-border-radius: 0 15px 15px 15px;
+    -o-border-radius: 0 15px 15px 15px;
+}
+.msg  {
+    color: hsl(210, 22%, 49%);
+}
+/* Tab switch  */
+.tab-container button {
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+}
+.tab-btn {
+    border: none;
+    outline: none;
+    background-color: hsl(212, 33%, 89%);
+}
+.tab-btn:hover:not(.active) {
+    background-color: #ebf7ff;
+    color: #49a6e9;
+}
+/* hide content */
+.content {
+    display: none;
+}
+.tab-btn.active {
+    background-color: #fff;
+}
+.content.active {
+    display: block;
+}
+
+/* Weather Check */
+@media only screen and (max-width: 480px) {
+    #weather h1 {
+        font-size: 30px;
+    }
+}
+
+/* Counter */
+#counter h1 {
+    font-size: 50px;
+    color: hsl(205, 77%, 27%);
+}
+#value {
+    font-size: 6rem;
+    font-weight: bold;
+    color: hsl(205, 77%, 27%);
+}
+.counter-btns a:hover {
+    color: #ffffff;
+    background-color: hsl(205, 77%, 27%);
+}

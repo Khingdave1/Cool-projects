@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    
+    <!-- Link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Title -->
+    <title>Practice</title>
+</head>
+<body>
+    <main class="container practice">
+        <!-- Message -->
+        <!-- <div class="msg">
+            <p class="mb-5">Click to switch between tabs.</p>
+        </div> -->
+
+        <!-- Tab buttons -->
+        <!-- <div class="tab-container">
+            <button class="tab-btn active px-4 py-2" data-id="weather">Weather</button>
+            <button class="tab-btn px-4 py-2" data-id="counter">Counter</button>
+        </div> -->
+
+        <!-- Weather and Counter -->
+        <div class="content-container bg-white">
+            <!-- Weather Check -->
+            <section class="content active px-3 py-5" id="weather">
+                <h1 class="mb-3 text-center text-dark">Weather check</h1>
+                <form id="city-form" class="mb-3 mx-0 mx-md-5">
+                    <div class="d-block mb-3">
+                        <label for="city" class="mb-2">Enter your city here</label><br>
+                        <input type="text" id="city" class="form-control w-100 border-rounded" autofocus>  
+                    </div>
+                    <button type="submit" class="btn btn-success">Check the weather!</button>
+                </form>
+                <!-- Report Section comment -->
+                <p id="weather-report" class="text-center h4"></p>    
+            </section>
+
+            <!-- Counter -->
+            <!-- <section class="content text-center px-3 py-5" id="counter">
+                <div>
+                    <h1>Counter</h1>
+                    <p id="value">0</p>
+                    <div class="counter-btns p-0 m-0">
+                        <a href="#" class="btn decrease text-uppercase font-weight-bold border border-dark py-2 px-4 rounded">Decrease</a>
+                        <a href="#" class="btn reset text-uppercase font-weight-bold border border-dark py-2 px-4 rounded m-3">Reset</a>
+                        <a href="#" class="btn increase text-uppercase font-weight-bold border border-dark py-2 px-4 rounded">Increase</a>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+        
+    </main>
+    
+   <!-- <footer>&copy; Khingdave</footer> -->
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+main {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../img/malte-wingen-PDX_a_82obo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+.keys-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20% 0;
+    margin: 0 7%;
+}
+.key {
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid #000;
+    width: 7rem;
+    height: 7rem;
+    margin: 0 5px;
+    transform: scale(1);
+    transition: all 0.07s ease;
+    -webkit-transition: all 0.07s ease;
+    -moz-transition: all 0.07s ease;
+    -ms-transition: all 0.07s ease;
+    -o-transition: all 0.07s ease;
+}
+.playing {
+    transform: scale(1.02);
+    border: 3px solid #ffc600;
+    box-shadow: 0 4px 7px 0 hsla(0, 0%, 100%, 0.2);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+.key p {
+    font-size: 25px;
+    font-weight: bold;
+}
+.key span {
+    color: #ffc600;
+}
+@media only screen and (max-width: 1050px) {
+    .keys-container {
+        margin: 0 2%;
+    }
+}
