@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="favicon icon" href="img/logo.png">
+    <title>Essencee</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <img src="img/logo.png" alt="logo" class="logo cursor">
+            <img src="img/menu-icon.png" alt="menu-icon" class="menu-icon cursor">
+        </div>
+        <div class="row">
+            <div class="left-col">
+                <div class="content">
+                    <h1><span>Colors</span> are the smiles of nature</h1>
+                    <p>In nature, light creates the colors. In picture, <br>the color creates the lights.</p>
+                    <div class="arrow cursor">
+                        <img src="img/arrow.png" alt="arrow">
+                    </div>
+                    <img src="img/art.png" alt="art" class="art">
+                </div>
+                
+            </div>
+            <div class="right-col">
+                <img src="img/pic1.png" alt="picture" class="pic">
+            </div>
+        </div>
+        
+        <!-- Controller -->
+        <div class="controller">
+            <ul>
+                <li class="tab active cursor">01</li>
+                <li class="tab cursor">02</li>
+                <li class="tab cursor">03</li>
+                <li class="tab cursor">04</li>  
+            </ul>
+        </div>
+    </div>
+
+<script>
+    
+        /*===== ACTIVE AND REMOVE MENU =====*/
+        const tabs = document.querySelectorAll('.tab'); 
+        const pic = document.querySelector('.pic');
+        function tabClick() {
+            //   Active link
+            tabs.forEach(tab => tab.classList.remove('active'));
+            this.classList.add('active');
+        }
+        tabs.forEach(tab => tab.addEventListener('click', tabClick));
+
+        // Change the images for each tabs
+        tabs[0].addEventListener('click', function() {
+            pic.src = "img/pic1.png";
+        });
+        tabs[1].addEventListener('click', function() {
+            pic.src = "img/pic2.png";
+        });
+        tabs[2].addEventListener('click', function() {
+            pic.src = "img/pic3.png";
+        });
+        tabs[3].addEventListener('click', function() {
+            pic.src = "img/pic4.png";
+        });
+</script>
+</body>
+</html>
