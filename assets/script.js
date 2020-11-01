@@ -19,7 +19,8 @@ const projects = [
   { name: "Animate page load", image: "assets/img/animate-page-load.png", live: "animatepageload/index.html"},
   { name: "JS clock", image: "assets/img/js-clock.png", live: "jsclcok/index.html"},
   { name: "Array cardio", image: "assets/img/array-cardio.png", live: "arraycardio/index.html"},
-  { name: "Sign in", image: "assets/img/signin.png", live: "signinform/index.html"}
+  { name: "Sign in", image: "assets/img/signin.png", live: "signinform/index.html"},
+  { name: "Essence", image: "assets/img/essence.png", live: "essence/index.html"}
 ];
 
 function showProjects() {
