@@ -3,18 +3,52 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    transition: all 1s ease-in;
+}
 :root {
     --primary-color: #ffc600;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
 }
+.dark-theme {
+    --primary-color: #ffc600;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    :root {
+        --primary-color: #ffc600;
+        --secondary-color: #818cab;
+        --font-color: #e1e1ff;
+        --bg-color: #161625;
+        --heading-color: #818cab;
+    }
+    .light-theme {
+        --primary-color: #ffc600;
+        --secondary-color: #536390;
+        --font-color: #424242;
+        --bg-color: #fff;
+        --heading-color: #292922;
+    }
+}
+
+
 body {
     font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 .container {
-    position: relative;
-    background-color: #fff;
+    position: absolute;
+    background-color: var(--bg-color);
     width: 100%;
-    height: 100vh;
-    overflow: visible;
     z-index: 2;
     animation: container 0ms 1150ms both;
     /* background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%); */
@@ -24,13 +58,12 @@ body {
 }
 .sidenav {
     width: 250px;
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     z-index: 1;
     top: 0;
     left: -1000%;
     background-color: #111;
-    overflow-x: hidden;
     transition: 0.2s ease-in;
     padding-top: 60px;
 }
@@ -90,8 +123,6 @@ body {
     width: 100%;
     height: 300px;
     border-radius: 10px;
-}
-.projects-item:hover {
     box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 .projects-item img {
@@ -192,3 +223,7 @@ footer a {
     }
 }
 /* Scale practice */
+
+
+
+
